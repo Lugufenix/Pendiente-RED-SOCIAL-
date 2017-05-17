@@ -1,2 +1,5 @@
 # Pendiente-RED-SOCIAL-
-Este, es un proyecto de una red social.
+
+  Gaytán Nava Aarón Emmanuel.
+  Reyes Farfán Andrea.
+  Marquez Valdez Luis.
