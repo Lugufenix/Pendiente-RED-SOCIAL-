@@ -12,6 +12,9 @@ Integrantes:
 
 •	Alejandro (anotate).
 
+
+
+
 Requerimentos del sistema:
 
 -XAMPP.
