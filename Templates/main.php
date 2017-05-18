@@ -27,8 +27,7 @@
 					SESSION_start();
 					$_SESSION["nombre"]=$consulta["nombre_usuario"];
 					//AGREGAR HASHING, Y CIFRADO DE CONTRASEÑAS, CLAVE privada Y publica.
-					print_r ("Bienvenido: ".$_SESSION["nombre"]);
-					//header("Location: ../Templates/muro.php");
+					header("Location: ../Templates/muro.php");
 				}
 			}
 		}
