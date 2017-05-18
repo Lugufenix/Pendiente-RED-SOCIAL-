@@ -1,0 +1,84 @@
+<!DOCTYPE html> 
+<html>  
+	<head> 
+	<!--Etiquetas del tipo de alfabeto-->
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<!--Links de materialize y el css/less-->
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+		<link type="text/css" rel="stylesheet" href="../Documents/css/materialize.css"  media="screen,projection"/>
+		<link href="../Documents/css/main.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<!--Etiquetas referetes al encabezado de la página-->
+		<title>Red Social</title>
+		<!--Opciones de icono-->
+		<link rel="shortcut icon" href="../Sources/icono2.png" type="image/png"/>
+	</head>  
+	<body> 
+	<!--Inicio del maquetado-->
+	
+	<!-- Dropdown -->
+
+
+
+
+
+<nav>
+  <div class="nav-wrapper purple">
+    <a href="#!" class="brand-logo center">Logo</a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="#">¿Quienes somos?</a></li>
+      <li><a href="#">Donaciones</a></li>
+      <!-- Dropdown Trigger -->
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">¡Empieza Ya!<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+
+<ul id="dropdown1" class="dropdown-content">
+  <li><a class="black-text" data-target="ModalIniciar">Iniciar Sesion</a></li>
+  <li class="divider"></li>
+  <li><a class="black-text" href="#ModalRegistrar">Registrarse</a></li>
+</ul>
+
+
+<div id="ModalIniciar" class="modal">
+			<form class="col s12" method="POST" action="../Templates/main.php">
+				<div class="modal-content">
+					<h4>Iniciar Sesion</h4>
+					<!--Formularios para iniciar sesión-->
+					<div class="row">
+					<!--Usuario-->
+						<div class="input-field col s12">
+							<i class="material-icons prefix">account_circle</i>
+							<input id="cuenta" name="cuenta" type="text" class="validate tooltipped" required pattern="^[a-zA-Z0-9_]{7,15}$" data-position="bottom" data-delay="50" data-tooltip="Mínimo 7 caracteres, máximo 15."/>
+							<label for="cuenta" data-error="*Completa correctamente este campo" data-success="¡Bien!">Nombre de usuario</label>
+						</div>
+					</div>
+					<!--Contraseña-->
+					<div class="input-field col s12">
+							<i class="material-icons prefix">vpn_key</i>
+							<input id="contraseña" name="contra" type="password" class="validate tooltipped" data-length="8" required pattern="{8,15}" data-position="bottom" data-delay="50" data-tooltip="Mínimo 8 caracteres."/>
+							<label for="contraseña" data-error="*Completa correctamente este campo" data-success="¡Bien!">Contraseña</label>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<input id="entrar" type="submit" class="waves-effect waves-purple btn-flat" value="Enviar"  onclick="valida_envia()" />
+					</div>
+			</form>
+					
+
+	
+   <!--Fin del maquetado-->
+	
+		<!--Scrips que se necesitaran-->
+		<script type="text/javascript" src="../Documents/js/jquery-3.2.1.js"></script>
+		<script type="text/javascript" src="../Documents/js/materialize.js"></script>
+		<script type="text/javascript" src="../Documents/js/main.js"></script>
+	</body> 
+</html> 
