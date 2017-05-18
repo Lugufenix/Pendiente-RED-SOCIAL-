@@ -4,13 +4,13 @@ Desarrollo de un sistema de red social, como parte de un proyecto enfocado al Di
 
 Integrantes:
 
-•	Gaytán Nava Aarón Emmanuel.
+  •	Gaytán Nava Aarón Emmanuel.
 
-•	Reyes Farfán Andrea. 
+  •	Reyes Farfán Andrea. 
 
-•	Marquez Valdez Luis.
+  •	Marquez Valdez Luis.
 
-•	Alejandro (anotate).
+  •	Alejandro (anotate).
 
 
 
