@@ -13,11 +13,18 @@ Integrantes:
 •	Alejandro (anotate).
 
 Requerimentos del sistema:
+
 -XAMPP.
+
 -Mysql.
+
 -Sistema operativo de 32 bits.
 
+
+
+
 Instalación del sistema:
+
 -Descargar XAMPP: https://www.apachefriends.org/es/index.html
 
 -Inicializar XAMPP y Mysql.
