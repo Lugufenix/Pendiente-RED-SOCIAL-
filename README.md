@@ -3,30 +3,27 @@
 Desarrollo de un sistema de red social, como parte de un proyecto enfocado al Diseño WEB.
 
 Integrantes:
+--------------------
 
-  •	Gaytán Nava Aarón Emmanuel.
-
-  •	Reyes Farfán Andrea. 
-
-  •	Marquez Valdez Luis.
-
-  •	Alejandro (anotate).
+  + Gaytán Nava Aarón Emmanuel.
+  +	Reyes Farfán Andrea. 
+  + Marquez Valdez Luis.
+  + Alejandro (anotate).
 
 
+Requerimentos del sistema
+--------------------
 
-
-Requerimentos del sistema:
-
--XAMPP.
-
--Mysql.
-
--Sistema operativo de 32 bits.
+  + XAMPP
+  + Mysql
+  + Sistema Operativo de 32 bits
 
 
 
 
 Instalación del sistema:
+--------------------
+
 
 -Descargar XAMPP: https://www.apachefriends.org/es/index.html
 
@@ -59,5 +56,3 @@ Instalación del sistema:
 -Dirigirse a  C:\xampp\htdocs\redsocial\templates.
 
 -Ejecutar main.html en su navegador favorito.
-
-
