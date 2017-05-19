@@ -19,10 +19,6 @@
 	
 	<!-- Dropdown -->
 
-
-
-
-
 <nav>
   <div class="nav-wrapper purple">
     <a href="#!" class="brand-logo center">Logo</a>
@@ -36,12 +32,8 @@
 </nav>
 
 
-
-
-
-
 <ul id="dropdown1" class="dropdown-content">
-  <li><a class="black-text" data-target="ModalIniciar">Iniciar Sesion</a></li>
+  <li><a class="black-text" href="#ModalIniciar">Iniciar Sesion</a></li>
   <li class="divider"></li>
   <li><a class="black-text" href="#ModalRegistrar">Registrarse</a></li>
 </ul>
@@ -56,7 +48,7 @@
 					<!--Usuario-->
 						<div class="input-field col s12">
 							<i class="material-icons prefix">account_circle</i>
-							<input id="cuenta" name="cuenta" type="text" class="validate tooltipped" required pattern="^[a-zA-Z0-9_]{7,15}$" data-position="bottom" data-delay="50" data-tooltip="Mínimo 7 caracteres, máximo 15."/>
+							<input id="cuenta" name="cuenta" type="text" class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="Mínimo 7 caracteres, máximo 15."/>
 							<label for="cuenta" data-error="*Completa correctamente este campo" data-success="¡Bien!">Nombre de usuario</label>
 						</div>
 					</div>
@@ -71,9 +63,33 @@
 						<input id="entrar" type="submit" class="waves-effect waves-purple btn-flat" value="Enviar"  onclick="valida_envia()" />
 					</div>
 			</form>
-					
-
-	
+		</div>
+			
+<div id="ModalRegistrar" class="modal">
+				<form class="col s12" method="POST" action="../Templates/registro.php">
+				<div class="modal-content">
+					<h4>¡Registrate!</h4>
+					<!--Formularios para iniciar sesión-->
+					<div class="row">
+					<!--Usuario-->
+						<div class="input-field col s12">
+							<i class="material-icons prefix">account_circle</i>
+							<input id="cuentanueva" name="cuentanueva" type="text" class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="*No se admiten caracteres especiales"/>
+							<label for="cuenta" data-error="*Completa correctamente este campo" data-success="¡Bien!">Nombre de usuario</label>
+						</div>
+					</div>
+					<!--Contraseña-->
+					<div class="input-field col s12">
+							<i class="material-icons prefix">vpn_key</i>
+							<input id="contraseñanueva" name="contranueva" type="password" class="validate tooltipped" data-length="8" required pattern="{8,15}" data-position="bottom" data-delay="50" data-tooltip="Mínimo 8 caracteres."/>
+							<label for="contraseña" data-error="*Completa correctamente este campo" data-success="¡Bien!">Contraseña</label>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<input id="entrar" type="submit" class="waves-effect waves-purple btn-flat" value="Enviar"  onclick="valida_envia()" />
+					</div>
+			</form>
+		</div>	
    <!--Fin del maquetado-->
 	
 		<!--Scrips que se necesitaran-->

@@ -13,23 +13,25 @@
 			$resultado = mysqli_query($conexion, "SELECT * FROM usuario WHERE nombre_usuario='".$cuenta."';");
 			$consulta= mysqli_fetch_assoc($resultado);
 			$usuario=$consulta["password"];
-			//Comprobar si el usuario existe
+			$oregano=$consulta["oregano"];	
+			$contra=$_POST["contra"];
+			
+				//Comprobar si el usuario existe
 			if ($usuario=="")
-				echo "no mames este usuario no existe, pendejo";//BORRRRRRRRRRRRRRRRRRRRRRRRRAAAAAAAAAAAAAAAAARRRRRRRRRRRRRRRRRR
+				echo "no mames este usuario no existe";//BORRRRRRRRRRRRRRRRRRRRRRRRRAAAAAAAAAAAAAAAAARRRRRRRRRRRRRRRRRR
 				//Agregar pagina de invitacion a REGISTRARSE
 //EL usuario es válido:
 			else {
-				if ($_POST["contra"]!=$consulta["password"])
-					echo "Contraseña incorrecta hijo de puta...";//BORRRRRRRRRRRRRRRRRRRRRRRRRAAAAAAAAAAAAAAAAARRRRRRRRRRRRRRRRRR
-					//AGREGAR HASHING, Y CIFRADO DE CONTRASEÑAS, CLAVE privada Y publica.
-				
-				else {
+					if ($usuario === hash('sha512', $oregano.$contra))
+					{
+					echo"Contraseña correcta!!!!!!";
 					SESSION_start();
 					$_SESSION["nombre"]=$consulta["nombre_usuario"];
-					//AGREGAR HASHING, Y CIFRADO DE CONTRASEÑAS, CLAVE privada Y publica.
-					header("Location: ../Templates/muro.php");
+					//header("Location: ../Templates/muro.php");
+					}
+					else
+						echo"Contraseña incorrecta";//BORRRRRRRRRRRRRRRRRRRRRRRRRAAAAAAAAAAAAAAAAARRRRRRRRRRRRRRRRRR
 				}
-			}
 		}
 		mysqli_close($conexion);
 	}
