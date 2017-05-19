@@ -15,6 +15,7 @@
 			$usuario=$consulta["password"];
 			$oregano=$consulta["oregano"];	
 			$contra=$_POST["contra"];
+			$nombreusuario=$consulta["nombre_usuario"];	
 			
 				//Comprobar si el usuario existe
 			if ($usuario=="")
@@ -24,7 +25,7 @@
 			else {
 					if ($usuario === hash('sha512', $oregano.$contra))
 					{
-					echo"Contraseña correcta!!!!!!";
+					echo"Bienvenido: ".$nombreusuario;
 					SESSION_start();
 					$_SESSION["nombre"]=$consulta["nombre_usuario"];
 					//header("Location: ../Templates/muro.php");
