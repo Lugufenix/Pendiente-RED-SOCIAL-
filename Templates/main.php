@@ -28,7 +28,8 @@
 					echo"Bienvenido: ".$nombreusuario;
 					SESSION_start();
 					$_SESSION["nombre"]=$consulta["nombre_usuario"];
-					//header("Location: ../Templates/muro.php");
+					$_SESSION["id"]=$consulta["id_usuario"];
+					header("Location: ../Templates/muro.php");
 					}
 					else
 						echo"Contraseña incorrecta";//BORRRRRRRRRRRRRRRRRRRRRRRRRAAAAAAAAAAAAAAAAARRRRRRRRRRRRRRRRRR
