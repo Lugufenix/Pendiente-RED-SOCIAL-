@@ -55,4 +55,4 @@ Instalación del sistema:
 
 -Dirigirse a  C:\xampp\htdocs\redsocial\templates.
 
--Ejecutar main.html en su navegador favorito.
+-Ejecutar inicio.html en su navegador favorito.
