@@ -1,9 +1,9 @@
 <?php
 	SESSION_start();
-	
+
 		  echo "<!DOCTYPE html>
 				<html>
-					<head> 
+					<head>
 					<!--Etiquetas del tipo de alfabeto-->
 						<meta charset='utf-8'/>
 						<meta http-equiv='X-UA-Compatible' content='IE=edge'/>
@@ -16,34 +16,44 @@
 						<title>Red Social</title>
 						<!--Opciones de icono-->
 						<link rel='shortcut icon' href='../Sources/icono2.png' type='image/png'/>
-					</head> 
-					
-					
-				<body>
-					<nav>
-					  <div class='nav-wrapper purple'>
-						<a href='#!' class='brand-logo center'>Logo</a>
-						<ul class='left hide-on-med-and-down'>
-						  <li><a href='#'>¡Hola!  ".$_SESSION['nombre']."</a></a></li>
-						  
-						</ul>
-						<ul class='right hide-on-med-and-down'>
-						<li><a href='main.html'>Salir</a></a></li>  
-						</ul>
-					  </div>
-					</nav>";
-	
-				echo " <footer class='white page-footer'>
-          <div class='purple footer-copyright'>
-            <div class='container white-text'>
-            © 2017 Copyright Text
-            <a class='white-text right' href='#!'>Preparatoria 6 Antonio Caso</a>
-            </div>
-          </div>
- </footer>
-				
-				
-				</body>"	
-					
-					
+						<script src='../Documents/js/jquery-3.2.1.js'></script>
+					</head>
+					<body>
+					<nav class='purple' role='navigation'>
+						<div class='nav-wrapper container'>
+							<a class='brand-logo center'>Logo</a>
+							<a href='' class='left'>¡Hola! ".$_SESSION['nombre']."</a>
+							<form action='main.html' method='POST'>
+							<input type='submit' class='right waves-effect waves-purple btn-flat white-text' value='Salir' name='bye'/>
+							</form>
+							</div>
+						</nav>
+					<section class='blue'>
+						<table id='prueba'>
+						</table>
+					</section>
+						<script type='text/javascript'>
+							$(document).ready(function() {
+								var muro = [];
+								$.ajax({
+									dataType: 'json',
+									url:'usuarios.php',
+									type: 'POST',
+									data: {
+													'muro':'JSON.parse(muro)',
+									},
+									success: function(result) {
+										var x = 0;
+										var y = 0;
+										while(result[x][y])
+										{
+											$('#prueba').append('<tr><td>'+result[x][y]+'</td></tr>');
+											$('#prueba').append('<tr><td>'+result[x+1][y]+'</td><td>'+result[x+2][y]+'</td></tr>');
+											y++;
+										}
+									}
+								})
+							});
+						</script>
+					</body>";
 ?>
