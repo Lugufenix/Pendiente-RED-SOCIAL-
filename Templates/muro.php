@@ -28,7 +28,7 @@
 							</form>
 							</div>
 						</nav>
-					<section class='blue'>
+					<section class='withe'>
 						<table id='prueba'>
 						</table>
 					</section>
@@ -55,5 +55,27 @@
 								})
 							});
 						</script>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+		 <footer class='white page-footer'>
+          <div class='purple footer-copyright'>
+            <div class='container white-text'>
+            © 2017 Copyright Text
+            <a class='white-text right' href='http://www.prepa6.unam.mx'>Preparatoria 6 Antonio Caso</a>
+            </div>
+          </div>
+ </footer>
 					</body>";
 ?>
