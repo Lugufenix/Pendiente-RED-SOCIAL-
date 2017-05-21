@@ -1,0 +1,131 @@
+<!DOCTYPE html> 
+<html>  
+	<head> 
+	<!--Etiquetas del tipo de alfabeto-->
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<!--Links de materialize y el css/less-->
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+		<link type="text/css" rel="stylesheet" href="../Documents/css/materialize.css"  media="screen,projection"/>
+		<link href="../Documents/css/main.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<!--Etiquetas referetes al encabezado de la página-->
+		<title>Red Social</title>
+		<!--Opciones de icono-->
+		<link rel="shortcut icon" href="../Sources/icono2.png" type="image/png"/>
+	</head>  
+	<body> 
+	<!--Inicio del maquetado-->
+	<!-- Dropdown -->
+
+<nav>
+  <div class="nav-wrapper purple">
+    <a href="#!" class="brand-logo center">Logo</a>
+    <ul class="right hide-on-med-and-down">
+      <!-- Dropdown Trigger -->
+    </ul>
+  </div>
+</nav>
+
+
+
+<ul id="dropdown1" class="dropdown-content">
+  <li><a class="black-text" href="#ModalIniciar">Iniciar Sesion</a></li>
+  <li class="divider"></li>
+  <li><a class="black-text" href="#ModalRegistrar">Registrarse</a></li>
+</ul>
+
+
+<div id="ModalIniciar" class="modal">
+			<form class="col s12" method="POST" action="../Templates/main.php">
+				<div class="modal-content">
+					<h4>Iniciar Sesion</h4>
+					<!--Formularios para iniciar sesión-->
+					<div class="row">
+					<!--Usuario-->
+						<div class="input-field col s12">
+							<i class="material-icons prefix">account_circle</i>
+							<input id="cuenta" name="cuenta" type="text" class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="Mínimo 7 caracteres, máximo 15."/>
+							<label for="cuenta" data-error="*Completa correctamente este campo" data-success="¡Bien!">Nombre de usuario</label>
+						</div>
+					</div>
+					<!--Contraseña-->
+					<div class="input-field col s12">
+							<i class="material-icons prefix">vpn_key</i>
+							<input id="contraseña" name="contra" type="password" class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="Mínimo 8 caracteres."/>
+							<label for="contraseña" data-error="*Completa correctamente este campo" data-success="¡Bien!">Contraseña</label>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<input id="entrar" type="submit" class="waves-effect waves-purple btn-flat" value="Enviar"  onclick="valida_envia()" />
+					</div>
+			</form>
+		</div>
+			
+<div id="ModalRegistrar" class="modal">
+				<form class="col s12" method="POST" action="../Templates/registro.php">
+				<div class="modal-content">
+					<h4>¡Registrate!</h4>
+					<!--Formularios para iniciar sesión-->
+					<div class="row">
+					<!--Usuario-->
+						<div class="input-field col s12">
+							<i class="material-icons prefix">account_circle</i>
+							<input id="cuentanueva" name="cuentanueva" type="text" class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="*No se admiten caracteres especiales"/>
+							<label for="cuenta" data-error="*Completa correctamente este campo" data-success="¡Bien!">Nombre de usuario</label>
+						</div>
+					</div>
+					<!--Contraseña-->
+					<div class="input-field col s12">
+							<i class="material-icons prefix">vpn_key</i>
+							<input id="contraseñanueva" name="contranueva" type="password" class="validate tooltipped"  required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$" data-position="bottom" data-delay="50" data-tooltip="Mínimo 8 caracteres."/>
+							<label for="contraseña" data-error="*Completa correctamente este campo: Minimo 8 caracteres. Maximo 15. Al menos una letra mayúscula. Al menos una letra minucula. Al menos un dígito. No espacios en blanco. Al menos 1 caracter especial" data-success="¡Bien!">Contraseña</label>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<input id="entrar" type="submit" class="waves-effect waves-purple btn-flat" value="Enviar"/>
+					</div>
+			</form>
+		</div>	
+
+<div>		
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink" width="1198" height="580">
+		<circle id="circulo1" cx="700" cy="300" r="150" fill="white" stroke="black" stroke-width="10"/>
+<circle id="circulo2" transform="translate(0,0)" cx="750" cy="160" r="20" fill="purple">
+<animateTransform attributeType="xml"
+				  attributeName="transform"
+				  type="rotate"
+				  from="360 700 300"
+				  to="0 700 300"
+				  dur="2s"
+				  fill="freeze"
+				  repeatCount="indefinite"/>
+
+
+</circle>
+ </svg>
+ </div>
+ <div class="row col l12 center-align">
+ <a class="purple waves-effect waves-light btn-large" href=main.html>Iniciar</a>	
+ </div>
+<!--Footer-->
+ <footer class="white page-footer">
+          <div class="purple footer-copyright">
+            <div class="container white-text">
+            © 2017 Copyright Text
+            <a class="white-text right" href="http://www.prepa6.unam.mx">Preparatoria 6 Antonio Caso</a>
+            </div>
+          </div>
+ </footer>
+		
+		
+		
+   <!--Fin del maquetado-->
+	
+		<!--Scrips que se necesitaran-->
+		<script type="text/javascript" src="../Documents/js/jquery-3.2.1.js"></script>
+		<script type="text/javascript" src="../Documents/js/materialize.js"></script>
+		<script type="text/javascript" src="../Documents/js/main.js"></script>
+	</body> 
+</html> 
