@@ -24,9 +24,9 @@
     <a href="#!" class="brand-logo center">Logo</a>
     <ul class="right hide-on-med-and-down">
       <li><a href="#">¿Quienes somos?</a></li>
-      <li><a href="#">Donaciones</a></li>
+      <li><a onclick="valida_envia()" href="#">Donaciones</a></li>
       <!-- Dropdown Trigger -->
-      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">¡Empieza Ya!<i class="material-icons right">arrow_drop_down</i></a></li>
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Usuarios<i class="material-icons right">arrow_drop_down</i></a></li>
     </ul>
   </div>
 </nav>
@@ -55,7 +55,7 @@
 					<!--Contraseña-->
 					<div class="input-field col s12">
 							<i class="material-icons prefix">vpn_key</i>
-							<input id="contraseña" name="contra" type="password" class="validate tooltipped" data-length="8" required pattern="{8,15}" data-position="bottom" data-delay="50" data-tooltip="Mínimo 8 caracteres."/>
+							<input id="contraseña" name="contra" type="password" class="validate tooltipped" data-position="bottom" data-delay="50" data-tooltip="Mínimo 8 caracteres."/>
 							<label for="contraseña" data-error="*Completa correctamente este campo" data-success="¡Bien!">Contraseña</label>
 						</div>
 					</div>
@@ -81,15 +81,29 @@
 					<!--Contraseña-->
 					<div class="input-field col s12">
 							<i class="material-icons prefix">vpn_key</i>
-							<input id="contraseñanueva" name="contranueva" type="password" class="validate tooltipped" data-length="8" required pattern="{8,15}" data-position="bottom" data-delay="50" data-tooltip="Mínimo 8 caracteres."/>
-							<label for="contraseña" data-error="*Completa correctamente este campo" data-success="¡Bien!">Contraseña</label>
+							<input id="contraseñanueva" name="contranueva" type="password" class="validate tooltipped"  required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$" data-position="bottom" data-delay="50" data-tooltip="Mínimo 8 caracteres."/>
+							<label for="contraseña" data-error="*Completa correctamente este campo: Minimo 8 caracteres. Maximo 15. Al menos una letra mayúscula. Al menos una letra minucula. Al menos un dígito. No espacios en blanco. Al menos 1 caracter especial" data-success="¡Bien!">Contraseña</label>
 						</div>
 					</div>
 					<div class="modal-footer">
-						<input id="entrar" type="submit" class="waves-effect waves-purple btn-flat" value="Enviar"  onclick="valida_envia()" />
+						<input id="entrar" type="submit" class="waves-effect waves-purple btn-flat" value="Enviar"/>
 					</div>
 			</form>
 		</div>	
+		
+		
+<!--Footer-->
+ <footer class="white page-footer">
+          <div class="purple footer-copyright">
+            <div class="container white-text">
+            © 2017 Copyright Text
+            <a class="white-text right" href="http://www.prepa6.unam.mx">Preparatoria 6 Antonio Caso</a>
+            </div>
+          </div>
+ </footer>
+		
+		
+		
    <!--Fin del maquetado-->
 	
 		<!--Scrips que se necesitaran-->

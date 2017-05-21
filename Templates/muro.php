@@ -19,39 +19,31 @@
 					</head> 
 					
 					
-					<body>
-					<nav class='purple' role='navigation'>
-						<div class='nav-wrapper container'>
-							<a class='brand-logo center'>Logo</a>
-							<a href='' class='left'>¡Hola! ".$_SESSION['nombre']."</a>
-							<form action='main.html' method='POST'>
-							<input type='submit' class='right waves-effect waves-purple btn-flat white-text' value='Salir' name='bye'/>
-							</form>
-							</div>
-						</nav>
-					</body>";
-					
-					$conexion = mysqli_connect("localhost", "root", "", "usuarios");
-										if (mysqli_connect_errno($conexion)) {
-											echo "Fallo al conectar a MySQL: " . mysqli_connect_error();
-										}
-										// En caso que la conexion sea exitosa, se mete al programa
-										else{
-											/*$consulta=$_POST["consulta"];
-											$resultado = mysqli_query($conexion, "SELECT * FROM todo WHERE id_animal=".$consulta.";");
-											$fila= mysqli_fetch_assoc($resultado);
-												print_r ($fila);
-											*/
-											$consulta=$_SESSION['id'];
-											$resultado = mysqli_query($conexion, "SELECT * FROM comentario WHERE id_usuario=".$consulta.";");
-											echo "Estos son los resultados";
-											//print_r $resultado;
-										}
-									
-					
-					
-					
-					
+				<body>
+					<nav>
+					  <div class='nav-wrapper purple'>
+						<a href='#!' class='brand-logo center'>Logo</a>
+						<ul class='left hide-on-med-and-down'>
+						  <li><a href='#'>¡Hola!  ".$_SESSION['nombre']."</a></a></li>
+						  
+						</ul>
+						<ul class='right hide-on-med-and-down'>
+						<li><a href='main.html'>Salir</a></a></li>  
+						</ul>
+					  </div>
+					</nav>";
+	
+				echo " <footer class='white page-footer'>
+          <div class='purple footer-copyright'>
+            <div class='container white-text'>
+            © 2017 Copyright Text
+            <a class='white-text right' href='#!'>Preparatoria 6 Antonio Caso</a>
+            </div>
+          </div>
+ </footer>
+				
+				
+				</body>"	
 					
 					
 ?>
