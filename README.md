@@ -1,4 +1,4 @@
-# Pendiente-RED-SOCIAL-
+# HI-9
 
 Desarrollo de un sistema de red social, como parte de un proyecto enfocado al Diseño WEB.
 
